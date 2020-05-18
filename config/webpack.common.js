@@ -2,7 +2,7 @@ const paths = require('./path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
-const sassModuleRegex = /\.module\.(css|scss|sass)$/;
+const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 module.exports = {
   entry: {
@@ -23,7 +23,15 @@ module.exports = {
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          // 'postcss-loader',
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                require('precss'),
+                require('autoprefixer')
+              ]
+            }
+          },
           'sass-loader'
         ]
       },
