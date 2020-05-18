@@ -5,4 +5,12 @@ body {
     background: black;
     color: #fff;
   }
+
+  .img-a {
+    width: 30px;
+    height: 30px;
+    background: red;
+    background: url("./assets/img/order-pay.png") no-repeat;
+    background-size: 100% 100%;
+  }
 }
