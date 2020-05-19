@@ -18,5 +18,8 @@ module.exports = merge(common, {
 				collapseWhitespace: true // 折叠空行变成一行
 			}
 		})
-	]
+	],
+	output: {
+		filename: 'assets/js/bundle.js'
+	}
 })

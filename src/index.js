@@ -14,6 +14,6 @@ import './test.css'
 // document.body.appendChild(component());
 
 ReactDom.render(<div className={`test-a test-b`}>
-	21313123
+	21313123=11123456
 	<TestA/>
 </div>, document.getElementById('root'));
